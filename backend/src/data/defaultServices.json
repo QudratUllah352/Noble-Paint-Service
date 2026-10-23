@@ -1,0 +1,115 @@
+[
+  {
+    "seedKey": "original-service-1",
+    "title": "Interior Wall & Ceiling Painting",
+    "description": "Flawless surface micro-repair, acoustic ceiling refinishing, and architectural eggshell or satin coating applied with razor-sharp laser lines.",
+    "categories": [
+      "residential"
+    ],
+    "features": [
+      "Full furniture containment & floor masking",
+      "Plaster & drywall joint micro-sanding",
+      "Zero-VOC odor-free premium dispersions"
+    ],
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDzSv83jl4vrIvjfYhx7su642zjwUwyNUpzdABcL8CqRB1ZEWif0rgcYgbzRBxT1d9zTtTGE1gbKl8ORd3CsvGUdyw8wFlUnsdLnzwl7aOzP5oAC6c7tFXJGs-CAKKS3stOXqFR1DDbhHM34SHCUU06vUCICvq-3DojJn2eRD6MXuVwwinzhrRm6f2bnoaoJYSkWn5Rv7K8v42ByCNplw7dvJNb-oJ0f1mNWVLoq8I_Wv6sa0z7fKmTiA",
+    "imageAlt": "An expansive modern open-concept living room bathed in natural morning light, featuring pristine off-white matte painted walls, flawless crisp ceiling corners, and refined royal cobalt accent details with fine wood flooring.",
+    "badge": "Interior Tier",
+    "sortOrder": 10,
+    "status": "Active"
+  },
+  {
+    "seedKey": "original-service-2",
+    "title": "Exterior Painting & Weatherproofing",
+    "description": "Multi-stage pressure wash prep, elastomeric bonding caulking, and high-build weather-shield coatings built to repel extreme UV and coastal humidity.",
+    "categories": [
+      "residential",
+      "commercial"
+    ],
+    "features": [
+      "3000 PSI high-temp exterior wash",
+      "Rot-resistant primer & seam elastomeric seal",
+      "10-Year anti-peel guarantee"
+    ],
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBQANWgoWnTzfddB_M_HP-ZwF0eaegyUUjd4dvawIdTSi04cxDz3EAVrtvsNyM3yQk-jDjtGvJDjsFbg7aDTYyhwFzmcegmmMMJMZY285xJHa0lKiCLnkI5eRfjjO9bFZhwC_kh1P2T_zlUkQWB6yZphtOWmpdDcJGkYgIiSy6QRIu6FbHQgDg3wWhQCB8UL0PujTA51MCo-RdKCj9AgBoQG-x47fXDZM30OSyOqNL8S7i_2O6dtZZ1eQ",
+    "imageAlt": "The exterior facade of a luxury coastal residence painted with premium architectural slate blue and bright white trim, surrounded by manicured landscaping, highlighting weather-sealed siding and durable finish under bright sunlight.",
+    "badge": "Weather Shield",
+    "sortOrder": 20,
+    "status": "Active"
+  },
+  {
+    "seedKey": "original-service-3",
+    "title": "Cabinet Refinishing & Restoration",
+    "description": "Complete conversion-varnish spray system. On-site spray tent extraction for boxes paired with off-site baking booth treatment for cabinet faces.",
+    "categories": [
+      "specialty",
+      "residential"
+    ],
+    "features": [
+      "Factory-grade HVLP spray application",
+      "Deep degreasing, grain fill & multi-sand",
+      "Chip-resistant polyurethane enamel"
+    ],
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuD_ulTP6K3T9KEIVkTlVC6hi3V3-aKcVBaTK0KZXoR0V1PxJKKjUO5s-pch2gQGbGPq2Xm0yUjQkx-Pna0FErAPbpvoqwX5nkrMxHKz7yxSG12lrg5ypUHmRiGArjmnt20ljwlo-r88cePfBWFW_TbGyCur2xB_EFgkkSB6KaUdKBk0dPJ-JSjUUdLtcWi513aeRzNUf-G4MoWENdxspazPLsKoWkWhAohFgscBtQMgxiN-hEbXnHkr0Q",
+    "imageAlt": "Gourmet kitchen cabinetry undergoing artisan factory-smooth lacquer finishing, deep midnight blue shaker doors with brass brushed handles, gleaming under high-end recessed ceiling lighting.",
+    "badge": "Factory Satin",
+    "sortOrder": 30,
+    "status": "Active"
+  },
+  {
+    "seedKey": "original-service-4",
+    "title": "Roofs & Gutters Protective Coating",
+    "description": "High-albedo reflective elastomeric coatings that reduce thermal heat gain by up to 35%, waterproof seams, and rejuvenate metal gutter linings.",
+    "categories": [
+      "commercial",
+      "specialty"
+    ],
+    "features": [
+      "Thermal reflective energy-saver formula",
+      "Commercial seamless drainage waterproofing",
+      "Rust neutralization & cold-applied primer"
+    ],
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuDa0WVPLIe3XOe2aT_l31FFJHQTVw-uTCNCtexcDzX2C1u8Xkh7bvwUjZQHNsra1ufNIlx2iML-WvcqHVJr_Zk-HwG_d3S6nwb4Xc16sPjlTFb_XqoMLHxL08AKFi_kzuXVLj3UaMlxWfooLNarUWNcO2IGCuhEwMhRs9XUnMyjuq4iMLaGOaBBo-I94kGKOwOlDDvGe1M1hXqIhYat4JDp1cUtx9nIjkB7xNVX5IGKBuJ9gTMxfB5P2Q",
+    "imageAlt": "Aerial view of a commercial modern flat roof and seamless gutter system receiving reflective elastomeric cooling sealant applied by professional technicians with specialized high-volume spray equipment.",
+    "badge": "Reflective Seal",
+    "sortOrder": 40,
+    "status": "Active"
+  },
+  {
+    "seedKey": "original-service-5",
+    "title": "Carpentry & Trim Repair",
+    "description": "True painting excellence requires solid substrate. Our in-house finish carpenters replace dry rot, build custom wainscoting, and install baseboards.",
+    "categories": [
+      "residential",
+      "specialty"
+    ],
+    "features": [
+      "Baseboard, casing & crown moulding install",
+      "Dry rot excision & structural replacement",
+      "Hidden fasteners & seamless putty blending"
+    ],
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuBMN7vUqTUrXjQ0kS9zbKwxBa2qNB9td9X5T1gR7Eu0EGqzn27RgcpEEVLeRgBcyicMMXgt4xoQ2h3tldicElRcuOMIec5dLGO_fMBjZAisNHk80XamIyaEtMC_sDLsX1KS7Ivnr4tzqUAoXqyEAUO3ZOrfoHCkULibFIE2zYSl2idyUEdq5-VawaLMwrUCrml-2gwlBJ1p0UeOycoq40VOIKrt7KMjPcoGT4-OtTCvnn8A_k-hKNdYNw",
+    "imageAlt": "Close up artisan view of intricate historical wood crown moulding and architectural wainscoting being carefully repaired, filled, and hand-sanded with carpentry hand tools prior to paint priming.",
+    "badge": "Finish Carpentry",
+    "sortOrder": 50,
+    "status": "Active"
+  },
+  {
+    "seedKey": "original-service-6",
+    "title": "Deck & Fence Deep Staining",
+    "description": "Deep-conditioning natural oils and UV-blocking hybrid pigments designed to nourish aging hardwoods, prevent mold penetration, and eliminate splintering.",
+    "categories": [
+      "residential",
+      "commercial"
+    ],
+    "features": [
+      "Acid-wash revival & neutralizer rinse",
+      "Penetrating trans-oxide pigment technology",
+      "Pedestrian wear barrier & water repellant"
+    ],
+    "imageUrl": "https://lh3.googleusercontent.com/aida-public/AB6AXuApUhFpNVXHuBitba_zXU0M2nrUzreAoqnVqWTbwrSzUqAFM_3IjPQ9sOjB60tuIp4yDddNo6sebQN31ZqDE1UomKGxECKX70I2cZifMnhfmjnAXLLuVkl3w4fYGP8O8pvtIdRQ2LDbqhfkN-CYgXm2rp2uWFY6Ri014nkCmS1Bjd8gTZBofXQySf83zEzSpfNVtvPlNrHhuVmXuonuwWwA9XXJB1VgD939iPHmZS-KPQDhlMv0lJ15yA",
+    "imageAlt": "Architectural cedar outdoor deck and privacy perimeter fence treated with a warm honey teak penetrating oil stain, showing deep natural wood grain textures overlooking a lush residential garden.",
+    "badge": "Wood Preservation",
+    "sortOrder": 60,
+    "status": "Active"
+  }
+]

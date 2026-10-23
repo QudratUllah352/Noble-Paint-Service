@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Team Management | Noble Paint Service</title>
+  <link rel="stylesheet" href="../assets/css/admin.css?v=home-theme-1">
+  <script src="../assets/js/admin-shell.js?v=5" defer></script>
+  <script src="../assets/js/admin-live.js" defer></script>
+  <script src="../assets/js/admin-team.js" defer></script>
+  <script src="../assets/js/admin-presentation.js" defer></script>
+</head>
+<body>
+  <main id="main" tabindex="-1">
+    <div class="section-title"><h1>Team management</h1><button id="admin-logout" class="button secondary">Sign out</button></div>
+    <p>Add your team and select active members when scheduling visits. Set a member to Inactive to retire their record while keeping past assignments.</p>
+    <p id="admin-status" role="status" aria-live="polite"></p>
+    <section class="panel settings-panel">
+      <h2 id="team-editor-heading">Add team member</h2>
+      <form id="team-form" class="form-grid">
+        <label class="field">Name<input name="name" maxlength="120" required></label>
+        <label class="field">Role<input name="role" maxlength="120" placeholder="e.g. Lead painter" required></label>
+        <label class="field">Email (optional)<input name="email" type="email" maxlength="254"></label>
+        <label class="field">Phone (optional)<input name="phone" type="tel" maxlength="40"></label>
+        <label class="field">Status<select name="status"><option>Active</option><option>On leave</option><option>Inactive</option></select></label>
+        <div class="settings-actions"><button class="button primary" type="submit">Save member</button><button id="team-new" class="button secondary" type="button">New member / cancel edit</button></div>
+      </form>
+      <p id="team-feedback" role="status" aria-live="polite"></p>
+    </section>
+    <form id="team-filters" class="panel settings-panel">
+      <div class="form-grid"><label class="field">Search team<input name="search" type="search" maxlength="120" placeholder="Name, role, email or phone"></label><label class="field">Status<select name="status"><option value="">All statuses</option><option>Active</option><option>On leave</option><option>Inactive</option></select></label></div>
+      <div class="settings-actions"><button class="button secondary" type="submit">Apply filters / refresh</button><button id="team-clear" class="button secondary" type="button">Clear filters</button></div>
+    </form>
+    <section id="team-list" aria-label="Saved team members"></section>
+    <div class="settings-actions"><button id="team-previous" class="button secondary" disabled>Previous</button><button id="team-next" class="button secondary" disabled>Next</button></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Appointments | Noble Paint Service</title>
+  <link rel="stylesheet" href="../assets/css/admin.css?v=home-theme-1">
+  <script src="../assets/js/admin-shell.js?v=5" defer></script>
+  <script src="../assets/js/admin-live.js" defer></script>
+  <script src="../assets/js/admin-appointments.js?v=7" defer></script>
+  <script src="../assets/js/admin-presentation.js" defer></script>
+</head>
+<body>
+  <main id="main" tabindex="-1">
+    <div class="section-title"><h1>Appointments</h1><button id="admin-logout" class="button secondary">Sign out</button></div>
+    <p>Use “Schedule / edit appointment” on an enquiry to arrange a visit. One appointment is kept per enquiry.</p>
+    <p>Review a saved appointment below, then send its confirmation, cancellation, or completion email to the customer.</p>
+    <p id="admin-status" role="status" aria-live="polite"></p>
+    <section id="appointment-editor" class="panel settings-panel" hidden>
+      <h2 id="appointment-heading">Schedule appointment</h2>
+      <p id="appointment-zone"></p>
+      <p>Confirm the time with the customer before saving. Saving does not send an email.</p>
+      <form id="appointment-form" class="form-grid">
+        <label class="field">Visit date and time<input name="startsAt" type="datetime-local" required></label>
+        <label class="field">Duration (minutes)<input name="durationMinutes" type="number" min="15" max="480" step="15" value="60" required><small>Back-to-back visits are allowed. Include any travel time you need in the duration.</small></label>
+        <label class="field">Assigned team member<select name="assignedMember" required><option value="">Choose an active team member</option></select><a href="./team.html" target="_blank" rel="noopener">Manage team members</a></label>
+        <label class="field wide">Visit address<textarea name="address" maxlength="500" rows="3" required></textarea></label>
+        <label class="field">Appointment status<select name="status"><option>Scheduled</option><option>Completed</option><option>Cancelled</option></select></label>
+        <div class="field"><button class="button primary" type="submit">Save appointment</button></div>
+      </form>
+      <p id="appointment-feedback" role="status" aria-live="polite"></p>
+      <section id="appointment-email-actions" aria-label="Email saved appointment">
+        <h3>Customer email</h3>
+        <p>Save an appointment to enable its email action.</p>
+      </section>
+    </section>
+    <form id="appointment-filter" class="panel settings-panel">
+      <label class="field">Filter appointments<select name="status"><option value="">All statuses</option><option>Scheduled</option><option>Completed</option><option>Cancelled</option></select></label>
+      <button class="button secondary" type="submit">Apply filter / refresh</button>
+    </form>
+    <section id="appointment-list" aria-label="Saved appointments"></section>
+    <div class="settings-actions"><button id="appointment-previous" class="button secondary" disabled>Previous</button><button id="appointment-next" class="button secondary" disabled>Next</button></div>
+  </main>
+</body>
+</html>

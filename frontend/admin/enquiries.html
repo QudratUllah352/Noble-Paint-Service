@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Live Enquiries | Noble Paint Service</title>
+  <link rel="stylesheet" href="../assets/css/admin.css?v=home-theme-1">
+  <script src="../assets/js/admin-shell.js?v=5" defer></script>
+  <script src="../assets/js/admin-live.js" defer></script>
+  <script src="../assets/js/admin-presentation.js" defer></script>
+</head>
+<body>
+  <main id="main" tabindex="-1">
+    <div class="section-title"><h1>Consultation requests</h1><button id="admin-logout" class="button secondary">Sign out</button></div>
+    <p>Saved Contact page requests. Preferred dates and arrival windows await confirmation.</p>
+    <form id="enquiry-filters" class="panel settings-panel" role="search" aria-label="Find enquiries">
+      <div class="form-grid">
+        <label class="field">Search name, email, or phone
+          <input id="enquiry-search" type="search" maxlength="120" placeholder="Name, email, or phone">
+        </label>
+        <label class="field">Status
+          <select id="enquiry-status-filter">
+            <option value="">All statuses</option>
+            <option>New</option><option>Contacted</option><option>Quoted</option><option>Won</option><option>Closed</option>
+          </select>
+        </label>
+      </div>
+      <div class="settings-actions"><button class="button primary" type="submit">Apply filters</button><button id="clear-enquiry-filters" class="button secondary" type="button">Clear</button></div>
+    </form>
+    <p id="admin-status" role="status" aria-live="polite">Loading requests…</p>
+    <section id="live-enquiries" aria-label="Consultation requests"></section>
+    <div class="settings-actions"><button id="previous-page" class="button secondary" disabled>Previous</button><button id="next-page" class="button secondary" disabled>Next</button><button id="refresh-enquiries" class="button secondary">Refresh</button></div>
+  </main>
+</body>
+</html>

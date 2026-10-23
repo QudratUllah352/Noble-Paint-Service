@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Audit History | Noble Paint Service</title>
+  <link rel="stylesheet" href="../assets/css/admin.css?v=home-theme-1">
+  <script src="../assets/js/admin-shell.js?v=5" defer></script>
+  <script src="../assets/js/admin-live.js" defer></script>
+  <script src="../assets/js/admin-audit.js" defer></script>
+  <script src="../assets/js/admin-presentation.js" defer></script>
+</head>
+<body>
+  <main id="main" tabindex="-1">
+    <div class="section-title"><h1>Audit history</h1><button id="admin-logout" class="button secondary">Sign out</button></div>
+    <p>Admin changes recorded from the time audit history was enabled. Entries show submitted field names, without storing field values or passwords.</p>
+    <section class="panel">
+      <h2>Filter history</h2>
+      <form id="audit-filters" class="form-grid">
+        <label class="field wide">Admin email or record ID<input name="search" maxlength="120" type="search"></label>
+        <label class="field">Action<select name="action" id="audit-action"><option value="">All actions</option></select></label>
+        <label class="field">Outcome<select name="outcome"><option value="">All outcomes</option><option>Pending</option><option>Completed</option><option>No record</option><option>Error</option></select></label>
+        <label class="field">From date (UTC)<input name="from" type="date"></label>
+        <label class="field">Through date (UTC)<input name="to" type="date"></label>
+        <button class="button primary" type="submit">Apply filters / refresh</button>
+      </form>
+    </section>
+    <p id="admin-status" role="status" aria-live="polite">Loading history...</p>
+    <p>Pending can mean an action is still running or its outcome was not recorded. Error means the operation reported an error; a write or email may still have occurred. Review the original record before retrying.</p>
+    <section class="panel"><h2>Recorded actions</h2><div id="audit-list"></div></section>
+    <div class="section-title"><button id="audit-prev" class="button secondary" type="button" disabled>Previous</button><span id="audit-page"></span><button id="audit-next" class="button secondary" type="button" disabled>Next</button></div>
+  </main>
+</body>
+</html>

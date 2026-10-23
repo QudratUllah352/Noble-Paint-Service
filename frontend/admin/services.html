@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Service Management | Noble Paint Service</title>
+  <link rel="stylesheet" href="../assets/css/admin.css?v=home-theme-1">
+  <script src="../assets/js/admin-shell.js?v=5" defer></script>
+  <script src="../assets/js/admin-live.js" defer></script>
+  <script src="../assets/js/admin-services.js" defer></script>
+  <script src="../assets/js/admin-presentation.js" defer></script>
+</head>
+<body>
+  <main id="main" tabindex="-1">
+    <div class="section-title"><h1>Service management</h1><button id="admin-logout" class="button secondary">Sign out</button></div>
+    <div class="settings-actions"><a class="button secondary" href="../services/" target="_blank" rel="noopener">View public Services page</a></div>
+    <p>Active services appear on the public Services page. Hide a service to remove its card without deleting its record. Homepage cards and pricing sections are managed separately.</p>
+    <p id="admin-status" role="status" aria-live="polite"></p>
+    <section class="panel settings-panel">
+      <h2 id="service-heading">Add service</h2>
+      <form id="service-form" class="form-grid">
+        <label class="field wide">Title<input name="title" maxlength="160" required></label>
+        <label class="field wide">Description<textarea name="description" rows="3" maxlength="2000" required></textarea></label>
+        <fieldset class="field wide"><legend>Categories (choose at least one)</legend><label><input name="categories" type="checkbox" value="residential"> Residential</label><label><input name="categories" type="checkbox" value="commercial"> Commercial</label><label><input name="categories" type="checkbox" value="specialty"> Specialty</label></fieldset>
+        <label class="field wide">Features (one per line, up to eight)<textarea name="features" rows="4" maxlength="1700"></textarea></label>
+        <label class="field wide">Image URL (optional)<input name="imageUrl" maxlength="2048" placeholder="https://… or /assets/…"></label>
+        <label class="field wide">Image description<input name="imageAlt" maxlength="500"></label>
+        <label class="field">Badge label (optional)<input name="badge" maxlength="60"></label>
+        <label class="field">Display order<input name="sortOrder" type="number" min="0" max="10000" step="1" value="100" required></label>
+        <label class="field">Visibility<select name="status"><option>Hidden</option><option>Active</option></select></label>
+        <div class="settings-actions"><button class="button primary" type="submit">Save service</button><button id="service-new" class="button secondary" type="button">New service / cancel edit</button></div>
+      </form>
+      <p id="service-feedback" role="status" aria-live="polite"></p>
+    </section>
+    <form id="service-filters" class="panel settings-panel">
+      <div class="form-grid"><label class="field">Search titles<input name="search" type="search" maxlength="120"></label><label class="field">Visibility<select name="status"><option value="">All services</option><option>Active</option><option>Hidden</option></select></label></div>
+      <div class="settings-actions"><button class="button secondary" type="submit">Apply filters / refresh</button><button id="service-clear" class="button secondary" type="button">Clear filters</button></div>
+    </form>
+    <section id="service-list" aria-label="Saved services"></section>
+    <div class="settings-actions"><button id="service-previous" class="button secondary" disabled>Previous</button><button id="service-next" class="button secondary" disabled>Next</button></div>
+  </main>
+</body>
+</html>

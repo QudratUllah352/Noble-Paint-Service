@@ -1,0 +1,34 @@
+
+    .accent-bg-offset {
+      position: relative;
+    }
+
+    .accent-bg-offset::before {
+      content: '';
+      position: absolute;
+      top: -18px;
+      right: -18px;
+      width: 100%;
+      height: 100%;
+      background-color: #f59e0b;
+      z-index: 0;
+      border-radius: 0.25rem;
+    }
+
+    .accent-bg-offset-left::before {
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      width: 100%;
+      height: 100%;
+      background-color: #f59e0b;
+      z-index: 0;
+      border-radius: 0.25rem;
+    }
+
+    .circular-stat-ring {
+      border: 1.5px solid rgba(255, 255, 255, 0.4);
+      border-radius: 9999px;
+    }
+  

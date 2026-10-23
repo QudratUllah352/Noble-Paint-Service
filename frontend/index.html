@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Noble Paint Service - Paint Your Home Like a Dream House</title>
+  <!-- Font Awesome Icons -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <!-- Tailwind CSS CDN with forms and container queries -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <!-- Tailwind Configuration -->
+  <script data-purpose="tailwind-config" src="assets/js/home-tailwind-config.js"></script>
+  <!-- Custom CSS for specialized layout offsets -->
+  <link rel="stylesheet" href="assets/css/home.css" data-purpose="custom-styling">
+</head>
+
+<body class="bg-[#fcfdfd] text-slate-800 antialiased font-sans">
+  <!-- BEGIN: MainHeader -->
+  <header class="bg-brand-blue sticky top-0 z-50 transition-shadow duration-300 shadow-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <!-- Logo -->
+        <a class="flex items-center gap-2 group" data-purpose="brand-logo" href="index.html">
+          <div class="h-10 flex items-center bg-white px-2.5 py-1 rounded shadow-sm"><img
+              src="https://lh3.googleusercontent.com/aida/AEtjO1V3cz8MDGOQwHT6pSkAKgRwWcO8Xjql2tH_Xd0gxm2oKjnNq3lyPoshmu1Ql2NtlhKMQYI8RjMymGPvLAN_JMM47aK9-rYDQ3r8ba4BL-v5syOEtBi-Fm3T50p4Xjpt_teFqa9aBKPLgtsdNPavD-v2UfhylhS-lV2VDDvCGiJMzhZ-Zmb1Gi6rhNIO12o_wJ_8Mom1xVovfq1DESZ-kkSmlNjDnJ_Cr3RFRLqCXP08CtXeIAsSKG7IiSob"
+              alt="Noble Paint Service" class="h-7 sm:h-8 w-auto object-contain"></div>
+        </a>
+        <!-- Desktop Navigation -->
+        <nav aria-label="Main Navigation"
+          class="hidden md:flex items-center space-x-8 text-sm font-medium text-white/90">
+          <a class="hover:text-brand-amber transition-colors" href="#home">Home</a>
+          <a class="hover:text-brand-amber transition-colors" href="about/index.html">About</a>
+          <a class="hover:text-brand-amber transition-colors" href="services/index.html">Services</a>
+          <a class="hover:text-brand-amber transition-colors" href="team/index.html">Team</a>
+          <a class="hover:text-brand-amber transition-colors" href="contact/index.html">Contact</a>
+        </nav>
+        <!-- Header CTA Button -->
+        <div class="hidden md:flex items-center">
+          <a class="bg-brand-amber hover:bg-brand-amber-hover text-white px-5 py-2.5 rounded text-sm font-semibold transition-all shadow hover:shadow-lg active:scale-95"
+            href="contact/index.html">
+            Free Consultation
+          </a>
+        </div>
+        <!-- Mobile Menu Toggle Button -->
+        <div class="md:hidden flex items-center">
+          <button aria-label="Toggle Navigation Menu" class="text-white hover:text-brand-amber p-2 focus:outline-none"
+            id="mobile-menu-btn" type="button">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Mobile Dropdown Navigation -->
+      <nav class="hidden md:hidden pb-4 space-y-2 border-t border-blue-400/30 pt-3" id="mobile-menu">
+        <a class="block px-3 py-2 rounded text-base font-medium text-white hover:bg-brand-blue-dark"
+          href="#home">Home</a>
+        <a class="block px-3 py-2 rounded text-base font-medium text-white hover:bg-brand-blue-dark"
+          href="about/index.html">About</a>
+        <a class="block px-3 py-2 rounded text-base font-medium text-white hover:bg-brand-blue-dark"
+          href="services/index.html">Services</a>
+        <a class="block px-3 py-2 rounded text-base font-medium text-white hover:bg-brand-blue-dark"
+          href="team/index.html">Team</a>
+        <a class="block px-3 py-2 rounded text-base font-medium text-white hover:bg-brand-blue-dark"
+          href="contact/index.html">Contact</a>
+        <div class="pt-2">
+          <a class="block text-center bg-brand-amber hover:bg-brand-amber-hover text-white px-4 py-2 rounded font-semibold text-sm"
+            href="contact/index.html">Free Consultation</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- END: MainHeader -->
+  <!-- BEGIN: HeroSection -->
+  <section class="bg-brand-blue text-white overflow-hidden pt-8 pb-16 lg:pb-24" id="home">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Hero Text & Metrics (Left Col) -->
+        <div class="lg:col-span-7 space-y-6 pt-4 lg:pt-0">
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.15]">
+            Paint your home <br class="hidden sm:inline">
+            like a dream house
+          </h1>
+          <p class="text-blue-100 text-sm sm:text-base max-w-xl leading-relaxed">
+            If you use real content in the design process, anytime you reach a review point you'll end up reviewing and
+            negotiating the content.
+          </p>
+          <!-- Dual Call to Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a class="bg-brand-amber hover:bg-brand-amber-hover text-white text-sm font-semibold px-6 py-3 rounded transition-all shadow-md active:scale-95"
+              href="contact/index.html">
+              Make An Appointment
+            </a>
+            <a class="bg-transparent hover:bg-brand-blue-dark border border-white/40 text-white text-sm font-semibold px-6 py-3 rounded transition-all active:scale-95"
+              href="#pricing">
+              Book Your Schedule
+            </a>
+          </div>
+          <!-- Circular Metric Badges -->
+          <div class="flex flex-wrap items-center gap-4 sm:gap-6 pt-8">
+            <!-- Metric 1 -->
+            <div
+              class="circular-stat-ring w-24 h-24 sm:w-28 sm:h-28 flex flex-col items-center justify-center text-center p-2 bg-brand-blue">
+              <span class="text-xs text-blue-200">Experts</span>
+              <span class="text-xl sm:text-2xl font-bold">50+</span>
+            </div>
+            <!-- Metric 2 -->
+            <div
+              class="circular-stat-ring w-24 h-24 sm:w-28 sm:h-28 flex flex-col items-center justify-center text-center p-2 bg-brand-blue">
+              <span class="text-xs text-blue-200">Customers</span>
+              <span class="text-xl sm:text-2xl font-bold">100+</span>
+            </div>
+            <!-- Metric 3 -->
+            <div
+              class="circular-stat-ring w-24 h-24 sm:w-28 sm:h-28 flex flex-col items-center justify-center text-center p-2 bg-brand-blue">
+              <span class="text-xs text-blue-200">Good Feedback</span>
+              <span class="text-xl sm:text-2xl font-bold">98%</span>
+            </div>
+          </div>
+        </div>
+        <!-- Hero Image (Right Col) -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end relative">
+          <div class="relative w-full max-w-md">
+            <img alt="Female professional painter in yellow hard hat holding roller"
+              class="w-full h-auto object-cover rounded-lg shadow-2xl relative z-10"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCabQR68PJ6dnruSLN7eswzjsq8FEosLmLQzpMmySyobcToFZe2hpt_Eji8ppUpEaajFX50YJI1tnj-nyLnLwcMn75ECqk62fnGgNEFxwKtpreCrne1Mt9--FT4GoBtjaM1V0Q9qwBYSg8KvuVgVoiAsQ5crOn7Ok0BuYdyDVeJBC-hvGEWt3b8iwnh4b1a3LTz8csZPc9a9EbHBmEhxGM_ufK9v8cspRT0VbYDCt08x2adO1zAcr92oA">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: HeroSection -->
+  <!-- BEGIN: ServicesSection -->
+  <section class="py-16 sm:py-24 bg-slate-50 relative" id="services">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Blue Accent Header Block -->
+      <div class="bg-brand-blue text-white rounded-lg p-8 sm:p-10 mb-[-60px] max-w-2xl shadow-lg relative z-20">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Our Services</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Our top Class Services</h2>
+      </div>
+      <!-- Services Grid Card Container -->
+      <div class="bg-white rounded-2xl shadow-xl border border-slate-100 pt-24 pb-12 px-6 sm:px-12 relative z-10 mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 sm:gap-12">
+          <!-- Service 1: Interior -->
+          <div class="space-y-3 group" data-purpose="service-item">
+            <div class="w-12 h-12 flex items-center justify-center text-brand-amber text-3xl">
+              <i class="fa-solid fa-couch"></i>
+            </div>
+            <h3 class="text-lg font-bold text-brand-amber">Interior</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            </p>
+          </div>
+          <!-- Service 2: Exterior -->
+          <div class="space-y-3 group" data-purpose="service-item">
+            <div class="w-12 h-12 flex items-center justify-center text-slate-700 text-3xl">
+              <i class="fa-regular fa-building"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-800">Exterior</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            </p>
+          </div>
+          <!-- Service 3: Maintenance -->
+          <div class="space-y-3 group" data-purpose="service-item">
+            <div class="w-12 h-12 flex items-center justify-center text-slate-700 text-3xl">
+              <i class="fa-solid fa-screwdriver-wrench"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-800">Maintenance</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            </p>
+          </div>
+          <!-- Service 4: Roofs and Gutters -->
+          <div class="space-y-3 group" data-purpose="service-item">
+            <div class="w-12 h-12 flex items-center justify-center text-slate-700 text-3xl">
+              <i class="fa-solid fa-warehouse"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-800">Roofs and Gutters</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+            </p>
+          </div>
+          <!-- Service 5: Carpentry -->
+          <div class="space-y-3 group" data-purpose="service-item">
+            <div class="w-12 h-12 flex items-center justify-center text-slate-700 text-3xl">
+              <i class="fa-solid fa-user-gear"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-800">Carpentry</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Get paid for what you're owed by cashing in on your unpaid invoices.
+            </p>
+          </div>
+          <!-- Service 6: Fences -->
+          <div class="space-y-3 group" data-purpose="service-item">
+            <div class="w-12 h-12 flex items-center justify-center text-slate-700 text-3xl">
+              <i class="fa-solid fa-bars-staggered"></i>
+            </div>
+            <h3 class="text-lg font-bold text-slate-800">Fences</h3>
+            <p class="text-sm text-slate-500 leading-relaxed">
+              Get paid for what you're owed by cashing in on your unpaid invoices.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: ServicesSection -->
+  <!-- BEGIN: AboutSection -->
+  <section class="py-16 sm:py-24 bg-white overflow-hidden" id="about">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        <!-- Left Blue Card with Copy -->
+        <div class="lg:col-span-7 bg-brand-blue text-white rounded-lg p-8 sm:p-12 shadow-lg space-y-5">
+          <span class="text-xs font-bold uppercase tracking-wider text-blue-200">About Us</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            We paint your dream on your wall
+          </h2>
+          <p class="text-blue-100 text-xs sm:text-sm leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum
+          </p>
+          <!-- Bullet points -->
+          <ul class="text-xs sm:text-sm text-blue-100 space-y-2 list-disc list-inside">
+            <li class="">Put enim ad minim veniam, quis nostrud</li>
+            <li class="">Pri enim ad minim mollit anim id est laborum</li>
+            <li class="">A wore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</li>
+          </ul>
+        </div>
+        <!-- Right Image with Warm Amber Accent Offset Frame -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end px-4">
+          <div class="accent-bg-offset relative max-w-sm w-full">
+            <img alt="Two professional painters wearing safety helmets discussing clipboard"
+              class="w-full h-auto object-cover rounded shadow-md relative z-10"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDOKXrIVdBjruxFkOMle3o5A92XNLVpU0sWvTSIO0lBP2_Gm4r9Kjl8cX-q0--EJ6PDWox-PrE81JPBavkU2MeYnoYrBFGl0BwtIyOy_-FHyO7HJkPN2-rT2jiG-HlFH3a-wG9qovjEZutVTYlStOJW-xDV6GEFbCCWhe61gxCddKkP-oZbNrk2pF4mJGRiaq7J0nw_UKwpKNWt2q901E2X-ZKDBQN69_jz_ycwasC7xOMBezOzvr60dw">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: AboutSection -->
+  <!-- BEGIN: WhyChooseUsSection -->
+  <section class="py-16 sm:py-24 bg-slate-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Image with Accent Frame -->
+        <div class="lg:col-span-6 flex justify-center lg:justify-start px-4 order-2 lg:order-1">
+          <div class="accent-bg-offset-left relative max-w-sm w-full">
+            <img alt="Male painter smiling cheerfully during job"
+              class="w-full h-auto object-cover rounded shadow-md relative z-10"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNP32lRMwGia-65lxM8HN4xygofkCs1xjXo_8s1qsG3EN3it9ESG9svaMx_7jDKv2OZycSNkhz0t7osx8v9tb-kELEPZVMKAG2vC4e9kIZMTo7N4ThGggyhWbBuYkeqjjRTVlrMb7QLRKzswuUXw3zUutoeJnWcthGUPJ2ZBbKnpRQT9ovqXls8icj7zPzK0Yv6meC9jT4S1NZx1HbdWGTv7JYMlF8QODgxfZEH-UGKf33FTdkt8k2aA">
+          </div>
+        </div>
+        <!-- Right Copy -->
+        <div class="lg:col-span-6 space-y-5 order-1 lg:order-2">
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Why Choose Us</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+            We are leading the market successfully
+          </h2>
+          <p class="text-slate-600 text-sm leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+            ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+            nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+            anim id est laborum
+          </p>
+          <div class="pt-2">
+            <a class="inline-block bg-brand-amber hover:bg-brand-amber-hover text-white text-sm font-semibold px-6 py-2.5 rounded transition-all shadow active:scale-95"
+              href="services/index.html">
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: WhyChooseUsSection -->
+  <!-- BEGIN: StatsCounterBar -->
+  <section class="bg-brand-blue text-white py-12 border-y border-blue-400/20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-blue-400/30">
+        <!-- Stat 1 -->
+        <div class="pt-4 md:pt-0">
+          <span class="text-3xl sm:text-4xl font-extrabold">34</span>
+          <div class="text-xs text-blue-200 mt-1">Completed Projects</div>
+        </div>
+        <!-- Stat 2 -->
+        <div class="pt-4 md:pt-0">
+          <span class="text-3xl sm:text-4xl font-extrabold">10</span>
+          <div class="text-xs text-blue-200 mt-1">Completed Years Experience</div>
+        </div>
+        <!-- Stat 3 -->
+        <div class="pt-4 md:pt-0">
+          <span class="text-3xl sm:text-4xl font-extrabold">10</span>
+          <div class="text-xs text-blue-200 mt-1">Completed Team Members</div>
+        </div>
+        <!-- Stat 4 -->
+        <div class="pt-4 md:pt-0">
+          <span class="text-3xl sm:text-4xl font-extrabold">15</span>
+          <div class="text-xs text-blue-200 mt-1">Completed Active Clients</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: StatsCounterBar -->
+  <!-- BEGIN: PricingSection -->
+  <section class="py-16 sm:py-24 bg-white" id="pricing">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Title -->
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Pricing</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">We offer the best pricing</h2>
+      </div>
+      <!-- Pricing Tier Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch max-w-5xl mx-auto">
+        <!-- Starter Card -->
+        <div
+          class="bg-white border border-slate-200 rounded-xl p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="flex justify-between items-baseline border-b border-slate-100 pb-4">
+              <h3 class="text-lg font-bold text-slate-800">Starter</h3>
+              <div class="text-right">
+                <span class="text-2xl font-extrabold text-slate-900">$199</span>
+                <span class="block text-[10px] text-slate-400">Best for small homeowners</span>
+              </div>
+            </div>
+            <div class="mt-6">
+              <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Plan Includes</p>
+              <ul class="text-xs space-y-3 text-slate-600">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i> 1
+                  Consultation</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i> 3 painters
+                </li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i> 1 Gallon
+                  Paint free</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i> Free
+                  Computer Rendering</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-8">
+            <a class="block text-center bg-brand-amber hover:bg-brand-amber-hover text-white text-xs font-bold py-3 rounded transition shadow"
+              href="contact/index.html">
+              Get Started
+            </a>
+          </div>
+        </div>
+        <!-- Pro Card (Featured Blue) -->
+        <div
+          class="bg-brand-blue text-white rounded-xl p-8 shadow-xl flex flex-col justify-between relative transform lg:-translate-y-2">
+          <div>
+            <div class="flex justify-between items-baseline border-b border-blue-400/40 pb-4">
+              <h3 class="text-lg font-bold text-white">Pro</h3>
+              <div class="text-right">
+                <span class="text-2xl font-extrabold text-white">$299.00</span>
+                <span class="block text-[10px] text-blue-200">Best for medium size houses</span>
+              </div>
+            </div>
+            <div class="mt-6">
+              <p class="text-xs font-bold text-blue-200 uppercase tracking-wider mb-4">Plan Includes</p>
+              <ul class="text-xs space-y-3 text-blue-100">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-amber text-xs"></i> 2
+                  Consultation</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-amber text-xs"></i> 5
+                  Painters</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-amber text-xs"></i> 2 Gallons
+                  Paint and others</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-brand-amber text-xs"></i> Free
+                  Computer Rendering</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-8">
+            <a class="block text-center bg-brand-amber hover:bg-brand-amber-hover text-white text-xs font-bold py-3 rounded transition shadow-md"
+              href="contact/index.html">
+              Get Started
+            </a>
+          </div>
+        </div>
+        <!-- Business Card -->
+        <div
+          class="bg-white border border-slate-200 rounded-xl p-8 shadow-sm flex flex-col justify-between hover:shadow-md transition">
+          <div>
+            <div class="flex justify-between items-baseline border-b border-slate-100 pb-4">
+              <h3 class="text-lg font-bold text-slate-800">Business</h3>
+              <div class="text-right">
+                <span class="text-2xl font-extrabold text-slate-900">$499</span>
+                <span class="block text-[10px] text-slate-400">Best for large apartments</span>
+              </div>
+            </div>
+            <div class="mt-6">
+              <p class="text-xs font-bold text-slate-500 uppercase tracking-wider mb-4">Plan Includes</p>
+              <ul class="text-xs space-y-3 text-slate-600">
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i> 3
+                  Consultation</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i> 5-10
+                  Painters</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i> 3 Gallons
+                  Paint</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i> Free
+                  Computer Rendering</li>
+                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-green-500 text-xs"></i> 3 Months
+                  Free Servicing</li>
+              </ul>
+            </div>
+          </div>
+          <div class="pt-8">
+            <a class="block text-center bg-brand-amber hover:bg-brand-amber-hover text-white text-xs font-bold py-3 rounded transition shadow"
+              href="contact/index.html">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: PricingSection -->
+  <!-- BEGIN: PortfolioShowcaseSection -->
+  <section class="bg-brand-blue text-white py-16 sm:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header with Navigation Arrows -->
+      <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+        <div>
+          <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Portfolio</span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold mt-1">Our works that will amaze you</h2>
+        </div>
+        <div class="flex items-center gap-3">
+          <button aria-label="Previous Project"
+            class="w-9 h-9 rounded bg-brand-blue-dark hover:bg-brand-deep border border-blue-400/40 flex items-center justify-center text-xs transition">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button aria-label="Next Project"
+            class="w-9 h-9 rounded bg-brand-amber hover:bg-brand-amber-hover flex items-center justify-center text-xs text-white transition">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
+      </div>
+      <!-- Gallery Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Project 1 -->
+        <article class="bg-white rounded-lg overflow-hidden text-slate-800 shadow-md">
+          <img alt="Grand Ville project interior view" class="w-full h-48 object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmhgAC05QNjpQKJ6EAuGZmPNjfL2lVJMWir_ystiJa49C-O-Zw-oke8a4aisMwMVDe_rOLqJ781zeeamblCRnBxXsfoK_H9oo4lSvHef4z_QaxyHNM_Csj3MSOp2j6mjNVvrrJ09zIn3sN2CUn7TFAfUr9IZZmAeELP9OOEIZN37LWnxikm7RoI-wvLhG1F43Le3TqbHmVxJ0NVj96DRmCdeOKXgpDXlUCcRjISlTJ4UcKyKSMp_cPfQ">
+          <div class="p-5">
+            <span class="text-[10px] text-slate-400 font-bold">01</span>
+            <h3 class="text-base font-bold text-slate-900 mt-1">Grand Ville</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Lorem ipsum dolor sit amet. Dan nos ligia eget dolor quam et. Aenean massa. Cum sociis Theme penatibus et
+              magnis dis parturient montes.
+            </p>
+          </div>
+        </article>
+        <!-- Project 2 -->
+        <article class="bg-white rounded-lg overflow-hidden text-slate-800 shadow-md">
+          <img alt="Louis Ville project poolside and patio view" class="w-full h-48 object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVWqpxiFXJG1uLZOB2yly_p9AGlnM15kF_qDrDcYU6_LJJojvhpm-05x1UR6lpggvNV7vPITUPsDpgH7XfdGR61v7wD306m_KZ33MhDLydWDTj3IyxRX73Q5jYnjxyDuRV8tIhOxPF4IkCFqR2Qw4sDrIsEPTTNPcuGS9ImYezROTrQBIOX7QN0efAWd81hRKqZ__bWX1AbvVrhBMzLgOpq6YJS3Jchga2loNkfB7lz5T8Pvu2pvK20g">
+          <div class="p-5">
+            <span class="text-[10px] text-slate-400 font-bold">02</span>
+            <h3 class="text-base font-bold text-slate-900 mt-1">Louis Ville</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Lorem ipsum dolor sit amet. Dan nos ligia eget dolor quam et. Aenean massa. Cum sociis Theme penatibus et
+              magnis dis parturient montes.
+            </p>
+          </div>
+        </article>
+        <!-- Project 3 -->
+        <article class="bg-white rounded-lg overflow-hidden text-slate-800 shadow-md">
+          <img alt="Louis Ville living room painted in warm tones" class="w-full h-48 object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFhcPFiNKfNn6TOtsleSrC8_z2ikNxtf77V0SZVt_K24LK7s7EEL4ZHSehBQ8y7dNoeJdYfsKwD25BjdDTso2aA6VtRTiZHUhbcfN-sjR5nSDqAXb_hUQ09_RUKl3rT-ZGuAXX6GKRy1efhYFZB_oRQ2v61IsMFzhA7Scrk0BUozvNuGFnF6kcnv_EKAEOKOF35VgbadpKgnnkKoQ8KO3TboRS9QauMLuxK7jZMWp1LG6g-U4ER8V_Mg">
+          <div class="p-5">
+            <span class="text-[10px] text-slate-400 font-bold">03</span>
+            <h3 class="text-base font-bold text-slate-900 mt-1">Louis Ville</h3>
+            <p class="text-xs text-slate-500 mt-2 leading-relaxed">
+              Lorem ipsum dolor sit amet. Dan nos ligia eget dolor quam et. Aenean massa. Cum sociis Theme penatibus et
+              magnis dis parturient montes.
+            </p>
+          </div>
+        </article>
+      </div>
+      <!-- Action Button -->
+      <div class="mt-10">
+        <a class="inline-block bg-brand-amber hover:bg-brand-amber-hover text-white text-xs font-bold px-6 py-3 rounded transition shadow"
+          href="services/index.html">
+          View All Projects
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- END: PortfolioShowcaseSection -->
+  <!-- BEGIN: OtherServicesSection -->
+  <section class="py-16 sm:py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        <!-- Left Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Other Services</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">
+              Other services that might interest you
+            </h2>
+            <p class="text-xs sm:text-sm text-slate-500 mt-3 max-w-xl">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore.
+            </p>
+          </div>
+          <!-- 3 Sub-services Column Layout -->
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+            <!-- Service 1 -->
+            <div class="space-y-2">
+              <div class="text-brand-amber text-xl"><i class="fa-solid fa-paint-roller"></i></div>
+              <h4 class="text-sm font-bold text-slate-800">Service 1</h4>
+              <p class="text-[11px] text-slate-500 leading-relaxed">
+                Pri cu quem molestiae, no autem voluptatibus duo. Duo saepe maiestatis ea, sed adhuc melius aeterno id.
+              </p>
+            </div>
+            <!-- Service 2 -->
+            <div class="space-y-2">
+              <div class="text-brand-amber text-xl"><i class="fa-solid fa-brush"></i></div>
+              <h4 class="text-sm font-bold text-slate-800">Service 2</h4>
+              <p class="text-[11px] text-slate-500 leading-relaxed">
+                Pri cu quem molestiae, no autem voluptatibus duo. Duo saepe maiestatis ea, sed adhuc melius aeterno id.
+              </p>
+            </div>
+            <!-- Service 3 -->
+            <div class="space-y-2">
+              <div class="text-brand-amber text-xl"><i class="fa-solid fa-fill-drip"></i></div>
+              <h4 class="text-sm font-bold text-slate-800">Service 3</h4>
+              <p class="text-[11px] text-slate-500 leading-relaxed">
+                Pri cu quem molestiae, no autem voluptatibus duo. Duo saepe maiestatis ea, sed adhuc melius aeterno id.
+              </p>
+            </div>
+          </div>
+          <div class="pt-4">
+            <a class="inline-block bg-brand-amber hover:bg-brand-amber-hover text-white text-xs font-bold px-6 py-3 rounded transition shadow"
+              href="services/index.html">
+              Learn More
+            </a>
+          </div>
+        </div>
+        <!-- Right Side Image with Offset Frame -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end px-4">
+          <div class="accent-bg-offset relative max-w-sm w-full">
+            <img alt="Close-up of painter wearing utility toolbelt holding paint roller"
+              class="w-full h-auto object-cover rounded shadow-md relative z-10"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLLt0d9ZZegqKGoCGjaRsfaI_HzibrUAlvOjFDyeEyv8-T9YoYgxPHzmO_dW_faWXtwWv6AD4w__3PXjpfkFB4JcJd_gnomON664JfCqEc9ldrF175k3Aig3RLYTSfyMb3Ebb67_FuG-KxCUcIVp_rvNpkWreMc_9BNI8etXrY12ENbJTC_N7oGw-GR3zddUUyOYir_8Ti_APLSkNX7T2O28A0k6MrI8v3BQojtFMI70z2bg_T4RZJ0g">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: OtherServicesSection -->
+  <!-- BEGIN: StepsProcessSection -->
+  <section class="bg-brand-blue text-white py-16 sm:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="mb-12">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Timing</span>
+        <h2 class="text-2xl sm:text-3xl font-extrabold mt-1">Simple easy steps to get started</h2>
+      </div>
+      <!-- 4 Process Step Columns -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Process 1 -->
+        <div class="border-t border-blue-400/40 pt-4 space-y-2">
+          <h4 class="text-sm font-bold text-white">Process 1</h4>
+          <p class="text-xs text-blue-200 leading-relaxed">
+            Lorem ipsum dolor sit amet. Dan nos ligia eget dolor quam et Aenean massa. Cum sociis
+          </p>
+          <div class="text-2xl font-black text-blue-200 pt-2">01</div>
+        </div>
+        <!-- Process 2 -->
+        <div class="border-t border-blue-400/40 pt-4 space-y-2">
+          <h4 class="text-sm font-bold text-white">Process 2</h4>
+          <p class="text-xs text-blue-200 leading-relaxed">
+            Lorem ipsum dolor sit amet. Dan nos ligia eget dolor quam et Aenean massa. Cum sociis
+          </p>
+          <div class="text-2xl font-black text-blue-200 pt-2">02</div>
+        </div>
+        <!-- Process 3 -->
+        <div class="border-t border-blue-400/40 pt-4 space-y-2">
+          <h4 class="text-sm font-bold text-white">Process 3</h4>
+          <p class="text-xs text-blue-200 leading-relaxed">
+            Lorem ipsum dolor sit amet. Dan nos ligia eget dolor quam et Aenean massa. Cum sociis
+          </p>
+          <div class="text-2xl font-black text-blue-200 pt-2">03</div>
+        </div>
+        <!-- Process 4 -->
+        <div class="border-t border-blue-400/40 pt-4 space-y-2">
+          <h4 class="text-sm font-bold text-white">Process 4</h4>
+          <p class="text-xs text-blue-200 leading-relaxed">
+            Lorem ipsum dolor sit amet. Dan nos ligia eget dolor quam et Aenean massa. Cum sociis
+          </p>
+          <div class="text-2xl font-black text-blue-200 pt-2">04</div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: StepsProcessSection -->
+  <!-- BEGIN: TeamSection -->
+  <section class="py-16 sm:py-24 bg-white" id="team">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">The Team</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">Meet the team</h2>
+      </div>
+      <!-- Team Members Grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <!-- Member 1: Val Robin -->
+        <div
+          class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col">
+          <img alt="Val Robin, Painter and Founder" class="w-full h-64 object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWQDS_BJQ2O8O3uqxHFiOI4tiv2GFsSrM467Raz9GqrBUfDN3bdEPQPL5WjNp44pihuzeTo_0AyW3wkoMvZQhgzrBwkWH4Ld4PbpV_j1v2Ooo6cFomj3ZWD8loZIBWD_3Dj8M5YGmL8OtIjJaNYwort-XQUFXaVZzhMUf9SnK6YpX4OueweVoQsjwkxCG3GrMO02JP-6VoCrhs8LNzolKy9jibuUcdy4GL4BdlEnAJ7CMZXmEEssUI0g">
+          <div class="bg-brand-amber text-white p-4 flex items-center justify-between mt-auto">
+            <div>
+              <h3 class="font-bold text-base leading-tight">Val Robin</h3>
+              <p class="text-xs text-amber-100">Founder</p>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <a aria-label="Twitter" class="hover:text-slate-900 transition" href="#"><i
+                  class="fa-brands fa-twitter"></i></a>
+              <a aria-label="LinkedIn" class="hover:text-slate-900 transition" href="#"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Member 2: Jack Matherw -->
+        <div
+          class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col">
+          <img alt="Jack Matherw, Painter and Founder" class="w-full h-64 object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCouC0LJQfl9Xt6-HVaQ8M2VsxoLa6_GtOhw1izeJiAhzHSCwOJ9F_fvEzl_M0RFpCOPDtWbtJ0tWZsMFKIlWxHcY8n7M0R2_q0lpccD81hSXxupnY1Tc-r4lwkvyNt5qZOen0VOYOSYZDtM7IgzUzbvuiNyFvH4NFThVd9KO1PpE7wIo5DY-SiG8XrGFEc7RsR-vXJWLcRkui8rbIZFOwLH-AqMozkxrY4csV_pE7wAqIbKjkitiijXA">
+          <div class="bg-brand-blue text-white p-4 flex items-center justify-between mt-auto">
+            <div>
+              <h3 class="font-bold text-base leading-tight">Jack Matherw</h3>
+              <p class="text-xs text-blue-200">Founder</p>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <a aria-label="Twitter" class="hover:text-brand-amber transition" href="#"><i
+                  class="fa-brands fa-twitter"></i></a>
+              <a aria-label="LinkedIn" class="hover:text-brand-amber transition" href="#"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <!-- Member 3: Paul Anderson -->
+        <div
+          class="rounded-xl overflow-hidden shadow-sm hover:shadow-md transition border border-slate-100 flex flex-col">
+          <img alt="Paul Anderson, Painter and Founder" class="w-full h-64 object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4f3Zmo_FI1C9-skOZMNyV2VKxGMMC9ujoSRiwOeDTCX2OLF_hrXO4eq4C05InLZbAqZCWnAkJvLS-eZBGuzpvohCzxA2kvrSPfO07TLBiya0i6dfIPyyUm8lne_NCusMBFUfH21ZK2JEKAB21SObLOlvAcV8AR1SPT5R3R2OzOwaE8HBJhYHRgfnYnBRddjMzpRdb5gEayqN53RKqsoO_MfVeBePOckfvawLgf-YTNyI0o-q-qpQoAQ">
+          <div class="bg-brand-blue text-white p-4 flex items-center justify-between mt-auto">
+            <div>
+              <h3 class="font-bold text-base leading-tight">Paul Anderson</h3>
+              <p class="text-xs text-blue-200">Founder</p>
+            </div>
+            <div class="flex items-center gap-3 text-sm">
+              <a aria-label="Twitter" class="hover:text-brand-amber transition" href="#"><i
+                  class="fa-brands fa-twitter"></i></a>
+              <a aria-label="LinkedIn" class="hover:text-brand-amber transition" href="#"><i
+                  class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: TeamSection -->
+  <!-- BEGIN: TestimonialsSection -->
+  <section class="py-16 sm:py-24 bg-slate-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Section Header -->
+      <div class="text-center max-w-xl mx-auto mb-16">
+        <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Review</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">What Our Valuable Customers Say</h2>
+      </div>
+      <!-- Testimonial Quote Cards Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <!-- Review 1 -->
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-slate-100 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-amber text-3xl font-black mb-3">“</div>
+            <h4 class="font-bold text-slate-900 text-sm mb-2">Loving the color</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              I've suffered from chronic neck issues for the past few years and was looking for something affordable (as
+              a student on a budget), so so glad I discovered homefolx super comfy and my neck feels so much better.
+            </p>
+          </div>
+          <div class="pt-6 font-bold text-xs text-slate-900">
+            Daniel.
+          </div>
+        </div>
+        <!-- Review 2 -->
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-slate-100 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-amber text-3xl font-black mb-3">“</div>
+            <h4 class="font-bold text-slate-900 text-sm mb-2">Loving the color</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              I've suffered from chronic neck issues for the past few years and was looking for something affordable (as
+              a student on a budget), so so glad I discovered homefolx super comfy and my neck feels so much better.
+            </p>
+          </div>
+          <div class="pt-6 font-bold text-slate-900 text-xs">
+            Daniel.
+          </div>
+        </div>
+        <!-- Review 3 -->
+        <div class="bg-white p-6 sm:p-8 rounded-lg shadow-sm border border-slate-100 flex flex-col justify-between">
+          <div>
+            <div class="text-brand-amber text-3xl font-black mb-3">“</div>
+            <h4 class="font-bold text-slate-900 text-sm mb-2">Loving the color</h4>
+            <p class="text-xs text-slate-500 leading-relaxed">
+              I've suffered from chronic neck issues for the past few years and was looking for something affordable (as
+              a student on a budget), so so glad I discovered homefolx super comfy and my neck feels so much better.
+            </p>
+          </div>
+          <div class="pt-6 font-bold text-slate-900 text-xs">
+            Daniel.
+          </div>
+        </div>
+      </div>
+      <!-- Controls -->
+      <div class="flex justify-center items-center gap-3 mt-10">
+        <button aria-label="Previous Reviews"
+          class="w-8 h-8 rounded bg-white hover:bg-slate-100 border border-slate-200 text-slate-600 flex items-center justify-center text-xs transition">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button aria-label="Next Reviews"
+          class="w-8 h-8 rounded bg-brand-amber hover:bg-brand-amber-hover text-white flex items-center justify-center text-xs transition">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </section>
+  <!-- END: TestimonialsSection -->
+  <!-- BEGIN: FAQSection -->
+  <section class="py-16 sm:py-24 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        <!-- Left Image with Accent Frame -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-start px-4">
+          <div class="accent-bg-offset-left relative max-w-sm w-full">
+            <img alt="Painter carefully painting white wall indoors"
+              class="w-full h-auto object-cover rounded shadow-md relative z-10"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-CGpXUVjWhdeKVY64bCDqbEWz-StWQHAPFlWYR7Q3htNa7yuwnvug-hQvUnFkDHLoFKBxKRTOfv4qexDwU244XLC2hCp74dfH7ovjQhE1YmROJ1MkPZZ3fto_Gzl1ajsBHH5ZYVnu-_WCij7XpL7-NMSrwoXjKsPt4BfuxpHmUX-Vhw1LHkWEgC11jJycpCtgNew9XtbBHeTJKqBvXv2tU6g5gbTYoTiuqnVvkHZNUZoH6YpKImsngQ">
+          </div>
+        </div>
+        <!-- Right Accordion FAQ Content -->
+        <div class="lg:col-span-7 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">FAQ</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mt-1">
+              Find frequently asked questions here
+            </h2>
+          </div>
+          <!-- Accordion Container -->
+          <div class="space-y-3 pt-2" data-purpose="faq-container" id="faq-accordion">
+            <!-- Item 1 (Open by default) -->
+            <div class="border-b border-slate-200 pb-3">
+              <button aria-expanded="true"
+                class="faq-toggle w-full flex justify-between items-center text-left py-2 font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-blue"
+                type="button">
+                <span class="">Do you have a physical office?</span>
+                <span class="faq-icon text-slate-400 text-sm"><i class="fa-solid fa-times"></i></span>
+              </button>
+              <div class="faq-content text-[11px] sm:text-xs text-slate-500 pt-1 leading-relaxed">
+                It's difficult to pinpoint which local and external (outbound) hyperlinks have stopped working and are
+                now returning 404 replies. Fixing such is significantly more difficult due to the need for cleaning.
+              </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="border-b border-slate-200 pb-3">
+              <button aria-expanded="false"
+                class="faq-toggle w-full flex justify-between items-center text-left py-2 font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-blue"
+                type="button">
+                <span class="">Do you provide free samples?</span>
+                <span class="faq-icon text-slate-400 text-sm"><i class="fa-solid fa-plus"></i></span>
+              </button>
+              <div class="faq-content hidden text-[11px] sm:text-xs text-slate-500 pt-1 leading-relaxed">
+                Yes, we provide standard swatches and color samples for your preview during the on-site initial
+                consultation.
+              </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="border-b border-slate-200 pb-3">
+              <button aria-expanded="false"
+                class="faq-toggle w-full flex justify-between items-center text-left py-2 font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-blue"
+                type="button">
+                <span class="">Do you provide free servicing?</span>
+                <span class="faq-icon text-slate-400 text-sm"><i class="fa-solid fa-plus"></i></span>
+              </button>
+              <div class="faq-content hidden text-[11px] sm:text-xs text-slate-500 pt-1 leading-relaxed">
+                Our premium packages feature complimentary touch-ups and warranty coverage for up to 3 months after work
+                completion.
+              </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="border-b border-slate-200 pb-3">
+              <button aria-expanded="false"
+                class="faq-toggle w-full flex justify-between items-center text-left py-2 font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-blue"
+                type="button">
+                <span class="">Do you have any return policy?</span>
+                <span class="faq-icon text-slate-400 text-sm"><i class="fa-solid fa-plus"></i></span>
+              </button>
+              <div class="faq-content hidden text-[11px] sm:text-xs text-slate-500 pt-1 leading-relaxed">
+                We guarantee 100% satisfaction. If you are not satisfied with the finish, our supervisors will evaluate
+                and re-coat per contract guidelines.
+              </div>
+            </div>
+            <!-- Item 5 -->
+            <div class="border-b border-slate-200 pb-3">
+              <button aria-expanded="false"
+                class="faq-toggle w-full flex justify-between items-center text-left py-2 font-bold text-xs sm:text-sm text-slate-800 hover:text-brand-blue"
+                type="button">
+                <span class="">How if the colors doesnt work?</span>
+                <span class="faq-icon text-slate-400 text-sm"><i class="fa-solid fa-plus"></i></span>
+              </button>
+              <div class="faq-content hidden text-[11px] sm:text-xs text-slate-500 pt-1 leading-relaxed">
+                We always conduct a 3D digital simulation and a test paint spot before committing the entire surface to
+                avoid any color discrepancy.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: FAQSection -->
+  <!-- BEGIN: ContactSection -->
+  <section class="py-16 sm:py-24 bg-slate-50" id="contact">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-white rounded-xl shadow-lg border border-slate-100 overflow-hidden">
+        <!-- Left Side Image -->
+        <div class="lg:col-span-5 h-full min-h-[400px]">
+          <img alt="Painters actively rolling bright orange color onto home wall" class="w-full h-full object-cover"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOWXqP8C6hNonegz_QqSDwLyrJ8j5b8b_d6xq2kXGzNcX-oG_wUMk814qo5MxeEb1dRMElJRuKUJVz1nl9M8tPki0za73bu_rFzCyR9kxnC4sudvpg_3hSDvRXRS9qUpjAyUQe9LfXr-fHtXDsFS8RBSXJ7115XYtNbY7NHf3HuNwEavY-a5-7MpnU-WcYh1vFzJfrYap7ksD-RSSDgMQEDhJpu64Jgn9EB_b17m2kMXWj617TZbCHqQ">
+        </div>
+        <!-- Right Side Contact Form -->
+        <div class="lg:col-span-7 p-8 sm:p-12 space-y-6">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-brand-amber">Contact Us</span>
+            <h2 class="text-3xl font-extrabold text-slate-900 mt-1">Get In Touch</h2>
+            <p class="text-xs text-slate-500 mt-1">We support businesses through periods of expansion, succession, and
+              all other important transitions.</p>
+          </div>
+          <!-- Functional Form -->
+          <form class="space-y-4" id="appointment-form" novalidate="">
+            <div>
+              <label class="sr-only" for="contact-name">Name</label>
+              <input class="w-full text-xs px-4 py-3 bg-slate-100 border-0 rounded focus:ring-2 focus:ring-brand-blue"
+                id="contact-name" name="name" placeholder="Name" required="" type="text">
+            </div>
+            <div>
+              <label class="sr-only" for="contact-email">Email</label>
+              <input class="w-full text-xs px-4 py-3 bg-slate-100 border-0 rounded focus:ring-2 focus:ring-brand-blue"
+                id="contact-email" name="email" placeholder="Email" required="" type="email">
+            </div>
+            <div>
+              <label class="sr-only" for="contact-phone">Phone</label>
+              <input class="w-full text-xs px-4 py-3 bg-slate-100 border-0 rounded focus:ring-2 focus:ring-brand-blue"
+                id="contact-phone" name="phone" placeholder="Phone" required="" type="tel">
+            </div>
+            <div>
+              <label class="sr-only" for="contact-message">Write your message</label>
+              <textarea
+                class="w-full text-xs px-4 py-3 bg-slate-100 border-0 rounded focus:ring-2 focus:ring-brand-blue resize-none"
+                id="contact-message" name="message" placeholder="Write your message" required="" rows="4"></textarea>
+            </div>
+            <div>
+              <button
+                class="bg-brand-amber hover:bg-brand-amber-hover text-white text-xs font-bold px-8 py-3.5 rounded transition shadow-md active:scale-95"
+                type="submit">
+                Send Enquiry
+              </button>
+            </div>
+            <!-- Form submission status message -->
+            <p class="text-xs text-slate-500">Send your enquiry to our team. Any appointment will be confirmed separately.</p>
+            <div class="hidden text-xs font-semibold p-3 rounded" id="form-feedback" role="status" aria-live="polite"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- END: ContactSection -->
+  <!-- BEGIN: MainFooter -->
+  <footer class="bg-white pt-16 pb-8 border-t border-slate-200 text-slate-600 text-xs">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-slate-200">
+        <!-- Column 1: Brand Info -->
+        <div class="space-y-4">
+          <a class="flex items-center gap-2" data-purpose="footer-logo" href="#">
+            <div class="inline-block"><img
+                src="https://lh3.googleusercontent.com/aida/AEtjO1V3cz8MDGOQwHT6pSkAKgRwWcO8Xjql2tH_Xd0gxm2oKjnNq3lyPoshmu1Ql2NtlhKMQYI8RjMymGPvLAN_JMM47aK9-rYDQ3r8ba4BL-v5syOEtBi-Fm3T50p4Xjpt_teFqa9aBKPLgtsdNPavD-v2UfhylhS-lV2VDDvCGiJMzhZ-Zmb1Gi6rhNIO12o_wJ_8Mom1xVovfq1DESZ-kkSmlNjDnJ_Cr3RFRLqCXP08CtXeIAsSKG7IiSob"
+                alt="Noble Paint Service" class="h-8 w-auto object-contain"></div>
+          </a>
+          <p class="text-slate-500 text-[11px] leading-relaxed">Transforming your home with premium quality painting
+            craftsmanship.</p>
+          <!-- Social Icons -->
+          <div class="flex items-center space-x-3 text-slate-700">
+            <a aria-label="Facebook"
+              class="w-7 h-7 rounded bg-slate-100 flex items-center justify-center hover:bg-brand-blue hover:text-white transition"
+              href="#"><i class="fa-brands fa-facebook-f text-xs"></i></a>
+            <a aria-label="Instagram"
+              class="w-7 h-7 rounded bg-slate-100 flex items-center justify-center hover:bg-brand-blue hover:text-white transition"
+              href="#"><i class="fa-brands fa-instagram text-xs"></i></a>
+            <a aria-label="Twitter"
+              class="w-7 h-7 rounded bg-slate-100 flex items-center justify-center hover:bg-brand-blue hover:text-white transition"
+              href="#"><i class="fa-brands fa-twitter text-xs"></i></a>
+            <a aria-label="LinkedIn"
+              class="w-7 h-7 rounded bg-slate-100 flex items-center justify-center hover:bg-brand-blue hover:text-white transition"
+              href="#"><i class="fa-brands fa-linkedin-in text-xs"></i></a>
+          </div>
+        </div>
+        <!-- Column 2: About Us Address -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-slate-900 tracking-wider text-xs uppercase">About Us</h4>
+          <p class="text-slate-500 leading-relaxed text-[11px]">
+            800 THIRD AVENUE #1140<br>
+            NEW YORK, NY 10022
+          </p>
+        </div>
+        <!-- Column 3: Legal Stuff -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-slate-900 tracking-wider text-xs uppercase">Legal Stuff</h4>
+          <ul class="space-y-1.5 text-[11px] text-slate-500 font-medium">
+            <li class=""><a class="hover:text-brand-blue transition" href="#">TERMS OF SERVICE</a></li>
+            <li class=""><a class="hover:text-brand-blue transition" href="#">PRIVACY POLICY</a></li>
+            <li class=""><a class="hover:text-brand-blue transition" href="#">SHIPPING POLICY</a></li>
+            <li class=""><a class="hover:text-brand-blue transition" href="#">REFUND POLICY</a></li>
+            <li class=""><a class="hover:text-brand-blue transition" href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <!-- Column 4: Customer Support -->
+        <div class="space-y-3">
+          <h4 class="font-bold text-slate-900 tracking-wider text-xs uppercase">Customer Support</h4>
+          <p class="text-[11px] text-slate-500">
+            <a class="hover:text-brand-blue" href="mailto:INFO@GMAIL.COM">INFO@GMAIL.COM</a>
+          </p>
+          <p class="text-[11px] text-slate-500">
+            P: +1 (704) 774-0545
+          </p>
+        </div>
+      </div>
+      <!-- Copyright Sub-Footer -->
+      <div class="pt-8 text-center text-[10px] text-slate-400 font-medium tracking-wide">© Noble Paint Service, 2024,
+        All Rights Reserved</div>
+    </div>
+  </footer>
+  <!-- END: MainFooter -->
+  <!-- BEGIN: InteractiveScripts -->
+  <!-- Mobile Menu & FAQ Interactions -->
+  <script data-purpose="ui-interactions" src="assets/js/home-ui.js"></script>
+  <!-- Appointment Form Handler Script -->
+  <script src="assets/js/form-validation.js"></script>
+  <script data-purpose="form-submission-handler" src="assets/js/home-form.js"></script>
+  <!-- END: InteractiveScripts -->
+
+
+
+
+</body>
+
+</html>

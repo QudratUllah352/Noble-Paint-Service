@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Recovery Tools | Noble Paint Service</title>
+  <link rel="stylesheet" href="../assets/css/admin.css?v=home-theme-1">
+  <script src="../assets/js/admin-shell.js?v=5" defer></script>
+  <script src="../assets/js/admin-live.js" defer></script>
+  <script src="../assets/js/admin-recovery.js" defer></script>
+  <script src="../assets/js/admin-presentation.js" defer></script>
+</head>
+<body>
+  <main id="main" tabindex="-1">
+    <div class="section-title"><h1>Recovery tools</h1><button id="admin-logout" class="button secondary">Sign out</button></div>
+    <p>Inspect appointment operations that may have been interrupted. A Sending email or scheduling lock can also be active; its presence alone does not mean recovery is needed.</p>
+    <button id="recovery-refresh" class="button secondary" type="button">Refresh report</button>
+    <p id="admin-status" role="status" aria-live="polite">Loading recovery report...</p>
+    <section class="panel"><h2>Scheduling lock</h2><div id="recovery-lock"></div></section>
+    <section class="panel"><h2>Emails awaiting an outcome</h2><div id="recovery-emails"></div></section>
+    <section class="panel">
+      <h2>Recover an interrupted operation</h2>
+      <ol>
+        <li>Copy the exact command from the report.</li>
+        <li>Stop all backend instances and workers, including any running on another machine. For a scheduling lock, review the saved appointments and reconcile any unfinished write before releasing it.</li>
+        <li>For email, check the customer inbox or provider logs. Choose received to record verified receipt, or retry to allow a manual resend. A retry may duplicate delivery.</li>
+        <li>Run the command from the backend folder and enter your current admin credentials when prompted. Password input is hidden.</li>
+        <li>Restart the backend and review the appointment and its history. Recovery never sends an email automatically.</li>
+      </ol>
+      <p>These commands require terminal access. Changes cannot be made from this page while the server is running. See backend/SETUP.md for details.</p>
+    </section>
+  </main>
+</body>
+</html>

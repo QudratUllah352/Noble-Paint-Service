@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Projects | Noble Paint Service</title>
+  <link rel="stylesheet" href="../assets/css/admin.css?v=home-theme-1">
+  <script src="../assets/js/admin-shell.js?v=5" defer></script>
+  <script src="../assets/js/admin-live.js" defer></script>
+  <script src="../assets/js/admin-projects.js" defer></script>
+  <script src="../assets/js/admin-presentation.js" defer></script>
+</head>
+<body>
+  <main id="main" tabindex="-1">
+    <div class="section-title"><h1>Projects</h1><button id="admin-logout" class="button secondary">Sign out</button></div>
+    <div class="settings-actions"><a class="button secondary" href="./enquiries.html?status=Won">Won enquiries</a></div>
+    <p>Create a project from a won enquiry. Project dates track planned work; schedule individual visits through Appointments.</p>
+    <p id="admin-status" role="status" aria-live="polite"></p>
+    <section id="project-editor" class="panel settings-panel" hidden>
+      <h2 id="project-heading">Create project</h2>
+      <p id="project-customer"></p>
+      <form id="project-form" class="form-grid">
+        <label class="field wide">Project title<input name="title" maxlength="160" required></label>
+        <label class="field">Assigned team member<select name="assignedMember" required><option value="">Choose an active member</option></select></label>
+        <label class="field">Status<select name="status"><option>Planned</option><option>In progress</option><option>Completed</option><option>Cancelled</option></select></label>
+        <label class="field">Planned start date (optional)<input name="startDate" type="date"></label>
+        <label class="field">Target completion date (optional)<input name="targetDate" type="date"></label>
+        <label class="field wide">Scope and work notes<textarea name="scope" rows="5" maxlength="5000"></textarea></label>
+        <button class="button primary" type="submit" disabled>Save project</button>
+      </form>
+      <p id="project-feedback" role="status" aria-live="polite"></p>
+    </section>
+    <form id="project-filters" class="panel settings-panel">
+      <div class="form-grid"><label class="field">Search projects<input name="search" type="search" maxlength="120" placeholder="Project title or customer name"></label><label class="field">Status<select name="status"><option value="">All statuses</option><option>Planned</option><option>In progress</option><option>Completed</option><option>Cancelled</option></select></label></div>
+      <div class="settings-actions"><button class="button secondary" type="submit">Apply filters / refresh</button><button id="project-clear" class="button secondary" type="button">Clear filters</button></div>
+    </form>
+    <section id="project-list" aria-label="Saved projects"></section>
+    <div class="settings-actions"><button id="project-previous" class="button secondary" disabled>Previous</button><button id="project-next" class="button secondary" disabled>Next</button></div>
+  </main>
+</body>
+</html>

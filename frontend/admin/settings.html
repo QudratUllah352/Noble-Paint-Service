@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Account Settings | Noble Paint Service</title>
+  <link rel="stylesheet" href="../assets/css/admin.css?v=home-theme-1">
+  <script src="../assets/js/admin-shell.js?v=5" defer></script>
+  <script src="../assets/js/admin-live.js" defer></script>
+  <script src="../assets/js/admin-settings.js" defer></script>
+  <script src="../assets/js/admin-presentation.js" defer></script>
+</head>
+<body>
+  <main id="main" tabindex="-1">
+    <div class="section-title"><h1>Account settings</h1><button id="admin-logout" class="button secondary">Sign out</button></div>
+    <p>Manage your admin sign-in details. Saving either change signs you out on all devices. Sign in again with the updated details.</p>
+    <p id="admin-status" role="status" aria-live="polite">Loading account…</p>
+    <section class="panel settings-panel">
+      <h2>Sign-in email</h2>
+      <p>This changes your admin login only. It does not change your SMTP sender or business notification inbox.</p>
+      <form id="account-email-form" class="form-grid">
+        <label class="field wide">Sign-in email<input name="email" type="email" autocomplete="username" maxlength="254" required></label>
+        <label class="field wide">Current password<input name="currentPassword" type="password" autocomplete="current-password" maxlength="256" required></label>
+        <button class="button primary" type="submit" disabled>Update sign-in email</button>
+      </form>
+      <p id="account-email-feedback" role="status" aria-live="polite"></p>
+    </section>
+    <section class="panel settings-panel">
+      <h2>Change password</h2>
+      <form id="account-password-form" class="form-grid">
+        <label class="field wide">Current password<input name="currentPassword" type="password" autocomplete="current-password" maxlength="256" required></label>
+        <label class="field">New password<input name="newPassword" type="password" autocomplete="new-password" minlength="12" maxlength="256" required></label>
+        <label class="field">Confirm new password<input name="confirmPassword" type="password" autocomplete="new-password" minlength="12" maxlength="256" required></label>
+        <button class="button primary" type="submit" disabled>Change password</button>
+      </form>
+      <p id="account-password-feedback" role="status" aria-live="polite"></p>
+    </section>
+  </main>
+</body>
+</html>
