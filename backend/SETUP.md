@@ -25,7 +25,7 @@ Restart the backend after configuring email. Submit a test enquiry using an inbo
 
 Enquiries are saved before attempting either email. Each recipient is attempted independently. SMTP failures log only a generic recipient label; they do not remove enquiries or turn saved submissions into failures. Disabled or invalid SMTP configuration leaves forms working without email. There is no persistent mail queue or automatic retry in this version, so delivery may be lost on a process interruption or SMTP failure. Delivery acknowledgement from SMTP does not guarantee inbox placement. When email is enabled, the two public form endpoints share a per-process limit of 10 requests per IP per 15 minutes.
 
-From `backend/`, run `npm install`. Copy `.env.example` to `.env`, then set `MONGODB_URI` to your MongoDB connection string. Keep `.env` private. No email or storage credentials are needed for this first page.
+From `backend/`, run `npm install`. Copy `.env.example` to `.env`, then set `MONGODB_URI` to your MongoDB connection string. Keep `.env` private. No email credentials are needed for this first page.
 
 Run `npm start` and open `http://localhost:5000/contact/`. Open the page through this server so the page and API share an origin; a separate Live Server does not forward API requests.
 
