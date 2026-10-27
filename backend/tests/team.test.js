@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { createApp } from '../src/app.js';
 import { hashPassword } from '../src/services/passwords.js';
 import { validateTeamMember } from '../src/validators/teamMember.js';
-import { teamFilter } from '../src/services/team.js';
+import { createTeamService, teamFilter } from '../src/services/team.js';
 import { createAppointmentService } from '../src/services/appointments.js';
 import { TeamMember } from '../src/models/TeamMember.js';
 
@@ -22,6 +22,43 @@ test('team validation checks lengths, contacts, statuses and rejects unknown fie
   assert.equal(filter.status, 'Active');
   assert.equal(new RegExp(filter.$or[0].name.$regex, 'i').test('Test Painter'), false);
   assert.equal(new RegExp(filter.$or[0].name.$regex, 'i').test('.*'), true);
+});
+
+test('public team directory is available without login and exposes only names and roles', async () => {
+  const server = createApp({
+    saveConsultation: async () => ({}),
+    teamDirectory: {
+      publicList: async () => [
+        { name: 'Public Painter', role: 'Painter', email: 'private@example.com', phone: '034 456 0987', status: 'Active' }
+      ]
+    }
+  }).listen(0, '127.0.0.1');
+  await new Promise(resolve => server.once('listening', resolve));
+  try {
+    const response = await fetch(`http://127.0.0.1:${server.address().port}/api/team`);
+    assert.equal(response.status, 200);
+    assert.match(response.headers.get('cache-control'), /no-store/);
+    assert.deepEqual(await response.json(), { items: [{ name: 'Public Painter', role: 'Painter' }] });
+  } finally { await new Promise(resolve => server.close(resolve)); }
+});
+
+test('public team service selects only active names and roles', async () => {
+  let query, projection, sort;
+  const model = {
+    find(value) {
+      query = value;
+      return {
+        select(value) { projection = value; return this; },
+        sort(value) { sort = value; return this; },
+        lean: async () => [{ name: 'Active Painter', role: 'Painter' }]
+      };
+    }
+  };
+  const items = await createTeamService(model).publicList();
+  assert.deepEqual(query, { status: 'Active' });
+  assert.equal(projection, 'name role -_id');
+  assert.deepEqual(sort, { name: 1, _id: 1 });
+  assert.deepEqual(items, [{ name: 'Active Painter', role: 'Painter' }]);
 });
 
 test('team APIs protect staff details and support create, edit, inactive status and validated filters', async () => {

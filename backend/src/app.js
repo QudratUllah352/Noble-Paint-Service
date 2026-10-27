@@ -5,7 +5,7 @@ import { adminRouter } from './routes/admin.js';
 import { validateHomeEnquiry } from './validators/homeEnquiry.js';
 import { rateLimit } from 'express-rate-limit';
 
-export function createApp({ saveConsultation, admin, notifyEnquiry, catalogue }) {
+export function createApp({ saveConsultation, admin, notifyEnquiry, catalogue, teamDirectory }) {
   async function sendNotification(saved) {
     if (!notifyEnquiry) return;
     try { await notifyEnquiry(saved); }
@@ -19,6 +19,14 @@ export function createApp({ saveConsultation, admin, notifyEnquiry, catalogue })
     if (!catalogue) return res.status(503).json({ message: 'Services are unavailable right now.' });
     try { res.json({ items: await catalogue.publicList() }); }
     catch (error) { next(error); }
+  });
+  app.get('/api/team', async (req, res, next) => {
+    res.set('Cache-Control', 'no-store');
+    if (!teamDirectory) return res.status(503).json({ message: 'Team information is unavailable right now.' });
+    try {
+      const members = await teamDirectory.publicList();
+      res.json({ items: members.map(({ name, role }) => ({ name, role })) });
+    } catch (error) { next(error); }
   });
   if (notifyEnquiry) app.use(['/api/enquiries', '/api/consultations'], rateLimit({
     windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false,

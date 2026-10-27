@@ -21,9 +21,10 @@
       <div class="flex items-center justify-between h-20">
         <!-- Logo -->
         <a class="flex items-center gap-2 group" data-purpose="brand-logo" href="../index.html">
-          <div class="h-10 flex items-center bg-white px-2.5 py-1 rounded shadow-sm"><img
-              src="https://lh3.googleusercontent.com/aida/AEtjO1V3cz8MDGOQwHT6pSkAKgRwWcO8Xjql2tH_Xd0gxm2oKjnNq3lyPoshmu1Ql2NtlhKMQYI8RjMymGPvLAN_JMM47aK9-rYDQ3r8ba4BL-v5syOEtBi-Fm3T50p4Xjpt_teFqa9aBKPLgtsdNPavD-v2UfhylhS-lV2VDDvCGiJMzhZ-Zmb1Gi6rhNIO12o_wJ_8Mom1xVovfq1DESZ-kkSmlNjDnJ_Cr3RFRLqCXP08CtXeIAsSKG7IiSob"
-              alt="Noble Paint Service" class="h-7 sm:h-8 w-auto object-contain"></div>
+          <div class="flex items-center gap-2">
+            <img aria-hidden="true" alt="" class="h-10 w-10 shrink-0" src="../assets/images/noble-paint-service-mark.svg">
+            <span class="whitespace-nowrap text-sm font-bold text-white sm:text-base">Noble Paint Service</span>
+          </div>
         </a>
         <!-- Desktop Navigation -->
         <nav aria-label="Main Navigation"
@@ -74,33 +75,12 @@
       <section class="page-hero relative w-full overflow-hidden bg-brand-blue text-white pt-8 pb-16 lg:pb-24"><div class="hero-inner max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto flex flex-col lg:flex-row lg:items-end justify-between gap-8 relative z-10">
           <div class="max-w-3xl flex flex-col gap-4">
-            <div
-              class="inline-flex items-center gap-2 self-start rounded-full bg-surface-container px-3.5 py-1 text-primary">
-              <span class="material-symbols-outlined text-[16px]"
-                style="font-variation-settings: 'FILL' 1;">verified</span>
-              <span class="font-label-md text-label-md tracking-wider uppercase">Vetted Crew · Master Class Guild</span>
-            </div>
             <h1 class="font-headline-xl text-headline-xl text-on-surface tracking-tight">
-              Meet Our Master Craftsmen <span class="text-primary">— Experienced, Licensed &amp;
-                Background-Checked.</span>
+              Meet the Noble Paint Service Team
             </h1>
             <p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl leading-relaxed">
-              Behind every pristine finish, perfectly sharp trim line, and durable exterior envelope is a seasoned
-              technician who views surface chemistry as an exact discipline. Get to know the certified leads directing
-              your transformations.
+              View the active team members and roles currently listed by Noble Paint Service.
             </p>
-          </div>
-          <!-- Quick Stats Pod -->
-          <div
-            class="flex flex-wrap sm:flex-nowrap gap-4 bg-surface p-6 rounded-xl shadow-sm self-start lg:self-auto min-w-[300px]">
-            <div class="flex flex-col pr-6">
-              <span class="font-headline-lg text-headline-lg text-primary font-bold">140+</span>
-              <span class="font-label-md text-label-md text-on-surface-variant">Combined Years Craft</span>
-            </div>
-            <div class="flex flex-col pl-2">
-              <span class="font-headline-lg text-headline-lg text-secondary font-bold">100%</span>
-              <span class="font-label-md text-label-md text-on-surface-variant">W2 Licensed &amp; Vetted</span>
-            </div>
           </div>
         </div>
         <!-- Decorative Structural Accent -->
@@ -109,37 +89,10 @@
       </div></section>
       <!-- TEAM FILTER & PROFILES SECTION -->
       <section class="w-full px-4 sm:px-6 lg:px-8 py-16 lg:py-24 max-w-7xl mx-auto">
-        <!-- Category Filter Controls -->
-        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-12">
-          <div class="flex items-center gap-2">
-            <span class="font-label-lg text-label-lg text-on-surface font-semibold">Specialty Focus:</span>
-            <span class="font-body-sm text-body-sm text-on-surface-variant">6 Active Guild Leaders</span>
-          </div>
-          <div class="flex flex-wrap gap-2" id="filter-buttons">
-            <button
-              class="filter-btn active-filter px-4 py-2 rounded-lg font-label-md text-label-md transition-all bg-primary text-on-primary"
-              onclick="filterTeam('all', this)">
-              All Specialists
-            </button>
-            <button
-              class="filter-btn px-4 py-2 rounded-lg font-label-md text-label-md transition-all bg-surface-container text-on-surface-variant hover:text-on-surface"
-              onclick="filterTeam('leadership', this)">
-              Executive &amp; Directors
-            </button>
-            <button
-              class="filter-btn px-4 py-2 rounded-lg font-label-md text-label-md transition-all bg-surface-container text-on-surface-variant hover:text-on-surface"
-              onclick="filterTeam('interiors', this)">
-              Cabinet &amp; Architectural Interior
-            </button>
-            <button
-              class="filter-btn px-4 py-2 rounded-lg font-label-md text-label-md transition-all bg-surface-container text-on-surface-variant hover:text-on-surface"
-              onclick="filterTeam('exterior', this)">
-              Weatherproofing &amp; Facades
-            </button>
-          </div>
-        </div>
+        <p id="team-status" class="pb-8 font-body-sm text-body-sm text-on-surface-variant" role="status"
+          aria-live="polite">Loading active team members…</p>
         <!-- Craftsmen Roster Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="team-grid">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="team-grid" hidden>
           <!-- Member 1: Val Robin -->
           <article
             class="team-card flex flex-col bg-surface-container-lowest rounded-xl shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl group"
@@ -725,8 +678,8 @@
             </div>
             <div class="pt-4 flex flex-col sm:flex-row items-center gap-4">
               <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-secondary-container text-on-secondary-container hover:bg-secondary hover:text-on-secondary font-label-lg text-label-lg px-8 py-3.5 rounded-lg shadow-md transition-all font-bold"
-                data-path="careers" href="#">
-                <span>Apply for Journeyman / Lead Position</span>
+                href="../contact/index.html#consultation-form">
+                <span>Ask about opportunities</span>
                 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
               </a>
               <span class="font-label-md text-label-md text-on-primary-container">Apprenticeship programs also
@@ -763,9 +716,9 @@
               <span>Schedule On-Site Consultation</span>
             </a>
             <a class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-surface hover:bg-surface-container text-on-surface font-label-lg text-label-lg px-8 py-4 rounded-lg shadow-sm transition-all font-semibold"
-              data-path="contact" href="../contact/index.html">
+              data-path="contact" href="tel:0344560987">
               <span class="material-symbols-outlined text-[20px]">call</span>
-              <span>Call (800) 555-PAINTS</span>
+              <span>Call 034 456 0987</span>
             </a>
           </div>
           <div
@@ -789,23 +742,13 @@
   </main>
   <footer class="site-footer w-full bg-white pt-16 pb-8 border-t border-slate-200">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-xl pb-space-xl">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-xl pb-space-xl">
         <div class="flex flex-col gap-space-md">
-          <div class="flex items-center gap-3"><img alt="Noble Paint Service Logo" class="h-8 w-auto object-contain"
-              src="https://lh3.googleusercontent.com/aida/AEtjO1V3cz8MDGOQwHT6pSkAKgRwWcO8Xjql2tH_Xd0gxm2oKjnNq3lyPoshmu1Ql2NtlhKMQYI8RjMymGPvLAN_JMM47aK9-rYDQ3r8ba4BL-v5syOEtBi-Fm3T50p4Xjpt_teFqa9aBKPLgtsdNPavD-v2UfhylhS-lV2VDDvCGiJMzhZ-Zmb1Gi6rhNIO12o_wJ_8Mom1xVovfq1DESZ-kkSmlNjDnJ_Cr3RFRLqCXP08CtXeIAsSKG7IiSob" /><span
+          <div class="flex items-center gap-3"><img aria-hidden="true" alt="" class="h-8 w-8 shrink-0" src="../assets/images/noble-paint-service-mark.svg"><span
               class="font-headline-sm text-headline-sm text-primary font-bold">Noble Paint Service</span></div>
           <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Architectural precision and
             master craftsmanship in residential and commercial coatings. Bringing enduring elegance to spaces since
             1998.</p>
-          <div class="flex items-center gap-space-sm pt-space-xs"><a aria-label="Company Profile"
-              class="w-9 h-9 rounded-lg bg-surface flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors"
-              href="#"><span class="material-symbols-outlined text-[20px]">share</span></a><a
-              aria-label="Portfolio Showcase"
-              class="w-9 h-9 rounded-lg bg-surface flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors"
-              href="#"><span class="material-symbols-outlined text-[20px]">photo_camera</span></a><a
-              aria-label="Reviews"
-              class="w-9 h-9 rounded-lg bg-surface flex items-center justify-center text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors"
-              href="#"><span class="material-symbols-outlined text-[20px]">verified</span></a></div>
         </div>
         <div class="flex flex-col gap-space-md">
           <h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Company</h4>
@@ -817,33 +760,15 @@
               class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
               data-path="team" href="../team/index.html">Our Master Painters</a><a
               class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-              data-path="careers" href="#">Careers &amp; Apprenticeship</a><a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
               data-path="quote-estimator" href="../contact/index.html#consultation-form">Request an Estimate</a></nav>
-        </div>
-        <div class="flex flex-col gap-space-md">
-          <h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Legal &amp; Compliance</h4>
-          <nav class="flex flex-col gap-space-sm"><a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-              data-path="terms-of-service" href="#">Terms of Service</a><a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-              data-path="privacy-policy" href="#">Privacy Policy</a><a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-              data-path="warranty-standards" href="#">Warranty &amp; Workmanship</a><a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-              data-path="contractor-license" href="#">License &amp; Insurance</a><a
-              class="font-body-sm text-body-sm text-on-surface-variant hover:text-on-surface transition-colors"
-              data-path="environmental-safety" href="#">VOC &amp; Environmental Safety</a></nav>
         </div>
         <div class="flex flex-col gap-space-md">
           <h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold">Customer Support</h4>
           <div class="flex flex-col gap-space-sm font-body-sm text-body-sm text-on-surface-variant">
             <div class="flex items-start gap-2"><span
-                class="material-symbols-outlined text-[18px] text-primary shrink-0">call</span><span>(800)
-                555-PAINTS</span></div>
+                class="material-symbols-outlined text-[18px] text-primary shrink-0">call</span><a href="tel:0344560987">034 456 0987</a></div>
             <div class="flex items-start gap-2"><span
-                class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span><span>consultation@noblepaint.com</span>
-            </div>
+                class="material-symbols-outlined text-[18px] text-primary shrink-0">mail</span><a href="mailto:qudratali948@gmail.com">qudratali948@gmail.com</a></div>
             <div class="flex items-start gap-2"><span
                 class="material-symbols-outlined text-[18px] text-primary shrink-0">schedule</span><span>Mon - Sat: 7:00
                 AM - 6:30 PM<br />Emergency On-Call: 24/7</span></div>
@@ -857,8 +782,6 @@
         class="pt-space-md flex flex-col sm:flex-row items-center justify-between gap-4 font-body-sm text-body-sm text-on-surface-variant">
         <p>© 2025 Noble Paint Service LLC. All rights reserved. Licensed, Bonded &amp; Insured.</p>
         <div class="flex items-center gap-6"><a class="hover:text-on-surface transition-colors"
-            data-path="privacy-policy" href="#">Privacy</a><a class="hover:text-on-surface transition-colors"
-            data-path="terms-of-service" href="#">Terms</a><a class="hover:text-on-surface transition-colors"
             data-path="contact" href="../contact/index.html">Support</a></div>
       </div>
     </div>

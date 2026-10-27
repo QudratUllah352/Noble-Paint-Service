@@ -22,6 +22,8 @@ import { createRecoveryService } from './services/recovery.js';
 import { RecoveryEvent } from './models/RecoveryEvent.js';
 import { AuditEvent } from './models/AuditEvent.js';
 import { createAuditService } from './services/audit.js';
+import { createPasswordResetService } from './services/passwordResets.js';
+import { configurePasswordResetEmail } from './services/passwordResetEmail.js';
 
 async function start() {
   if (!process.env.MONGODB_URI) throw new Error('Set MONGODB_URI in backend/.env before starting.');
@@ -33,6 +35,9 @@ async function start() {
   await AuditEvent.init();
   await seedServices(Service);
   const catalogue = createCatalogueService(Service);
+  const siteUrl = process.env.PUBLIC_SITE_URL || 'http://localhost:5000';
+  const sendPasswordResetEmail = configurePasswordResetEmail(process.env, siteUrl);
+  const team = createTeamService(TeamMember);
   const projects = createProjectService(Project, Consultation, TeamMember);
   const appointments = createAppointmentService(Appointment, Consultation, configureAppointmentEmail(process.env), TeamMember, createSchedulingGuard(OperationLock));
   const readOverview = createOverviewReader(Consultation);
@@ -40,13 +45,14 @@ async function start() {
     secret: process.env.SESSION_SECRET,
     store: MongoStore.create({ client: mongoose.connection.getClient(), collectionName: 'admin_sessions' }),
     secure: process.env.NODE_ENV === 'production',
-    siteUrl: process.env.PUBLIC_SITE_URL || 'http://localhost:5000',
+    siteUrl,
     findAdmin: email => Admin.findOne({ email }).select('+passwordHash').lean(),
     appointments,
-    team: createTeamService(TeamMember),
+    team,
     projects,
     catalogue,
     accounts: createAccountService(Admin),
+    passwordResets: sendPasswordResetEmail ? createPasswordResetService(Admin, sendPasswordResetEmail) : undefined,
     recovery: createRecoveryService(Appointment, OperationLock, RecoveryEvent),
     audit: createAuditService(AuditEvent),
     getOverview: async () => {
@@ -61,7 +67,7 @@ async function start() {
     ).select('_id status').lean(),
     listConsultations: createConsultationLister(Consultation)
   } : undefined;
-  const app = createApp({ saveConsultation: value => Consultation.create(value), admin, catalogue,
+  const app = createApp({ saveConsultation: value => Consultation.create(value), admin, catalogue, teamDirectory: team,
     notifyEnquiry: configureEnquiryEmail(process.env) });
   const port = Number(process.env.PORT || 5000);
   const server = app.listen(port, () => console.log(`Contact page: http://localhost:${port}/contact/`));

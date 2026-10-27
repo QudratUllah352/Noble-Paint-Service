@@ -10,8 +10,9 @@ import { catalogueRouter } from './catalogue.js';
 import { accountRouter } from './account.js';
 import { auditAction } from '../services/audit.js';
 import { auditRouter } from './audit.js';
+import { validatePasswordReset, validatePasswordResetRequest } from '../validators/passwordReset.js';
 
-export function adminRouter({ secret, store, secure = false, siteUrl, findAdmin, listConsultations, updateConsultationStatus, updateConsultationNotes, getOverview, appointments, team, projects, catalogue, accounts, recovery, audit }) {
+export function adminRouter({ secret, store, secure = false, siteUrl, findAdmin, listConsultations, updateConsultationStatus, updateConsultationNotes, getOverview, appointments, team, projects, catalogue, accounts, recovery, audit, passwordResets }) {
   if (!secret || secret.length < 32) throw new Error('SESSION_SECRET must contain at least 32 characters.');
   const router = express.Router();
   const origin = new URL(siteUrl).origin;
@@ -28,6 +29,30 @@ export function adminRouter({ secret, store, secure = false, siteUrl, findAdmin,
       return res.status(403).json({ message: 'Request origin or content type is not allowed.' });
     }
     next();
+  });
+  const forgotPasswordLimit = rateLimit({ windowMs: 15 * 60 * 1000, limit: 5, standardHeaders: 'draft-8', legacyHeaders: false,
+    message: { message: 'Too many password reset requests. Please try again later.' } });
+  const resetPasswordLimit = rateLimit({ windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false,
+    message: { message: 'Too many reset attempts. Please request a new link later.' } });
+  router.post('/forgot-password', forgotPasswordLimit, async (req, res, next) => {
+    if (!passwordResets) return res.status(503).json({ message: 'Password recovery email is not configured. Contact your administrator.' });
+    const { errors, value } = validatePasswordResetRequest(req.body);
+    if (Object.keys(errors).length) return res.status(400).json({ message: 'Enter a valid email address.', errors });
+    try {
+      await passwordResets.request(value.email);
+      res.json({ message: 'If an admin account uses that email, a reset link will be sent shortly.' });
+    } catch (error) { next(error); }
+  });
+  router.post('/reset-password', resetPasswordLimit, async (req, res, next) => {
+    if (!passwordResets) return res.status(503).json({ message: 'Password recovery is not configured. Contact your administrator.' });
+    const { errors, value } = validatePasswordReset(req.body);
+    if (Object.keys(errors).length) return res.status(400).json({ message: 'Check the reset link and password requirements.', errors });
+    try {
+      if (!await passwordResets.reset(value.token, value.newPassword)) {
+        return res.status(400).json({ message: 'This reset link is invalid or has expired. Request a new one.' });
+      }
+      res.json({ message: 'Password reset. Sign in with your new password.' });
+    } catch (error) { next(error); }
   });
   const limiter = rateLimit({ windowMs: 15 * 60 * 1000, limit: 10, standardHeaders: 'draft-8', legacyHeaders: false,
     message: { message: 'Too many login attempts. Please try again in 15 minutes.' } });

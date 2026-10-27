@@ -15,7 +15,10 @@ export function createAccountService(Admin) {
       try {
         const updated = await Admin.findOneAndUpdate({
           _id: id, passwordHash: account.passwordHash, sessionVersion: account.sessionVersion ?? null
-        }, { $set: change }, { new: true, runValidators: true }).select('email').lean();
+        }, {
+          $set: change,
+          $unset: { passwordResetTokenHash: 1, passwordResetExpiresAt: 1 }
+        }, { new: true, runValidators: true }).select('email').lean();
         if (!updated) throw Object.assign(new Error('Account changed while saving. Sign in again.'), { status: 409 });
         return { email: updated.email };
       } catch (error) {
