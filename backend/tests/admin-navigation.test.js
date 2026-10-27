@@ -95,6 +95,4 @@ test('live admin entry maps old section links without loading the sample dashboa
   }
   const index = await readFile(new URL('../../frontend/admin/index.html', import.meta.url), 'utf8');
   assert.match(index, /admin-entry\.js/); assert.doesNotMatch(index, /admin\.js/);
-  const sample = await readFile(new URL('../../frontend/admin/sample.html', import.meta.url), 'utf8');
-  assert.match(sample, /Archived Sample Workspace/); assert.match(sample, /assets\/js\/admin\.js/);
 });

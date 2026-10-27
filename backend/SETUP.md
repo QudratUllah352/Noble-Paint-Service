@@ -39,7 +39,7 @@ Run `npm test` for API tests using an injected persistence function; these tests
 
 Open `/admin/` to enter the live workspace. The entry page opens `/admin/overview.html`; protected API requests redirect unsigned visitors to login. Overview, Enquiries, Appointments, Team, Projects and Services share a sidebar, active-section indicator, header, website link and sign-out action. On mobile, use **Menu**; the drawer supports keyboard focus, Escape, a close button and the backdrop. Existing form elements are retained when the shared layout is created, so their handlers and entered values remain intact.
 
-The previous browser-local sample dashboard is archived at `/admin/sample.html` and is no longer linked from live navigation. Its original script and local-storage key remain unchanged; no browser data is cleared or imported into MongoDB. Old `/admin/#enquiries`, `#appointments`, `#team`, `#projects`, `#services`, `#settings` and `#overview` links open the corresponding live section. Unsupported old sections open the overview. JavaScript-disabled entry pages provide direct links to overview and sign-in.
+Old `/admin/#enquiries`, `#appointments`, `#team`, `#projects`, `#services`, `#settings` and `#overview` links open the corresponding live section. Unsupported old sections open the overview. JavaScript-disabled entry pages provide direct links to overview and sign-in.
 
 ### Account settings
 
@@ -165,7 +165,7 @@ Audit entries use the `auditevents` MongoDB collection with no automatic expiry.
 
 The appointments page filters by status and shows 25 visits per page. The overview shows up to five future Scheduled visits, earliest first. Past, Completed and Cancelled visits remain in the appointments page. Startup initializes the appointment indexes; the database user must have permission to create indexes. Automated tests use injected storage and model validation; verify persistence with your local MongoDB after restarting the backend.
 
-Login opens `/admin/overview.html`, a live overview of total enquiries, counts for New/Contacted/Quoted/Won/Closed, and the five latest enquiries. Click a status count to open the enquiries page with that filter applied. Use **Refresh overview** for updated counts after changes. Older pending records are included in New. The overview API (`GET /api/admin/overview`) requires an admin session and uses no-store caching. The old sample workspace is archived at `/admin/sample.html`.
+Login opens `/admin/overview.html`, a live overview of total enquiries, counts for New/Contacted/Quoted/Won/Closed, and the five latest enquiries. Click a status count to open the enquiries page with that filter applied. Use **Refresh overview** for updated counts after changes. Older pending records are included in New. The overview API (`GET /api/admin/overview`) requires an admin session and uses no-store caching.
 
 Keep your current `.env` values. Add these settings locally:
 
